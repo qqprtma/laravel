@@ -13,10 +13,25 @@
 
 use App\Pembaca;
 
-Route::get('/', function () {
-    //return view('welcome');
-    return Pembaca::all();
-});
+Route::get('contoh1', 'contohcontroller@latihan1');
+Route::get('contoh2', 'contohcontroller@latihan2');
+Route::get('contoh3', 'contohcontroller@latihan3');
+Route::get('contoh4', 'contohcontroller@latihan4');
+Route::get('latihan', 'contohcontroller@latihan5');
+Route::get('menu/{makan}', 'contohcontroller@menu');
+Route::get('menuu/{makan?}/{minum?}/{harga?}', 'contohcontroller@apa');
+
+//Menggunakan optimal
+
+
+
+//CRUD buku
+Route::get('get-pembaca/{id}', 'Pembacacontroller@index');
+Route::get('create-pembaca/', 'Pembacacontroller@buat_data');
+Route::get('get-pembaca/{id}', 'Pembacacontroller@show');
+Route::get('delete-pembaca/{id}', 'Pembacacontroller@delete');
+Route::get('update-pembaca', 'Pembacacontroller@udate');
+Route::get('hitung-pembaca', 'Pembacacontroller@hitung_buku');
 
 Route::get('/name', function () {
     return ('Nama saya SUSAN NUR AINI');
